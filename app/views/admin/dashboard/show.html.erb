@@ -1,2 +1,13 @@
 <h1>Admin::Dashboard#show</h1>
+<p class="fw-bold">
+  Total number of products:
+  <a href="<%= admin_products_path %>">
+    <span class="badge bg-primary"><%= Product.count %></span>
+  </a>
+</p>
+<p class="fw-bold">
+  Total number of categories:
+    <span class="badge bg-secondary"><%= Category.count %></span>
+  </a>
+</p>
 <p>Find me in app/views/admin/dashboard/show.html.erb</p>
