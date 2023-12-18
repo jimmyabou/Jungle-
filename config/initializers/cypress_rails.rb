@@ -35,4 +35,11 @@ end
 
 CypressRails.hooks.before_server_stop do
   # Called once, at_exit
+  DatabaseCleaner.clean
+end
+
+private
+
+def open_asset(file_name)
+  File.open(Rails.root.join('db', 'seed_assets', file_name))
 end
